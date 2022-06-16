@@ -1,0 +1,101 @@
+
+/* header是总的头部 
+    其中左侧topbar为flex
+    右侧为topbar_button非flex
+
+*/
+
+#header{
+    /* 基本样式设置 */
+    background-color:#0d6efd;
+    height: 60px;
+    box-shadow: 0px 0px 5px;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius: 7px;
+    position: fixed;/*固定位置*/
+
+    /* 最大Z Axis */
+    z-index: 9999;
+
+}
+
+/*顶栏左边那部分*/
+#topBar{
+
+    height: 100%;
+    align-items: center;
+
+    float: left;
+    display:flex;
+
+    overflow: hidden;
+}
+#topBar div#topBar_text:after{
+    
+    content:"|";
+    color:aliceblue;
+    font-size: 30px;
+}
+
+#topBar div#topBar_text a{
+    
+    /* float: left; */
+    /* align-self: center; */
+    color:aliceblue;
+    /* flex: 1; */
+    /* margin-top: 5px; */
+    font-size: 30px;
+}
+
+#topBar #topBar_option{
+    /* align-self: center; */
+    
+    text-decoration: none;
+    margin-right: 5px;
+    color:aliceblue;
+    font-size: 20px;
+
+    /* transition:all 200ms; */
+    transition:all 0.2s ease-in-out;
+    /* border-style: dashed;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0; */
+
+}
+#topBar #topBar_option:hover{
+    font-size: 25px;
+    margin-right: 40px;
+    /* text-decoration:underline; */
+    
+    /* border-bottom: dashed; */
+
+}
+#topBar #topBar_option:hover:before{
+    /* content: ">"; */
+    
+}
+#topBar #topBar_option::after{
+    content: "";
+    display: block;
+    /* position: relative; */
+
+    transition:all 0.2s ease-in-out;
+    border-bottom: solid;
+    transform: scaleX(0);
+    
+}
+#topBar #topBar_option:hover::after{
+  
+    transform: scaleX(1);
+    
+    
+}
+#topBar_button{
+
+    margin-top: 11px;
+    /* display: flex; */
+    /* flex:1; */
+    float: right;
+    /* align-items: center; */
+}
